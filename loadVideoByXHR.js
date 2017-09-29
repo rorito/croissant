@@ -2,6 +2,10 @@ var loadVideoStandard = require("./loadVideoStandard");
 
 var video = document.createElement("video");
 
+video.crossOrigin = true;
+video.setAttribute('webkit-playsinline', 'webkit-playsinline');
+video.setAttribute('playsinline', 'playsinline');
+
 function supported () {
   return typeof URL !== "undefined" &&
     URL.createObjectURL &&
